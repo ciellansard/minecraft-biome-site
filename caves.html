@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  <link rel="stylesheet" type="text/css" href="styles/caves_style.css" />
+  <link rel="icon" type="image/x-icon" href="images/diamond_icon.png">
+  <title>Caves</title>
+
+</head>
+
+<body id="bg_default" onload="random_cave_delay()">
+  <header class="n_Grid">
+    <div class="hover_text" class="b_Biomes">
+      <a href="index.html">
+        <img src="images/title_main.png" id="logo" alt="The site's logo.">
+        <span class="tooltip" id="t_left">BIOMES</span>
+      </a>
+    </div>
+    <br style="padding:50%;">
+    <nav class="b_Grid">
+      <div class="hover_text" class="b_Forests">
+        <a href="forests.html">
+          <img src="images/block_azalea_leaves.png" alt="A button with Minecraft's azalea leaf texture.">
+          <span class="tooltip" id="bottom">FORESTS</span>
+        </a>
+      </div>
+      <div class="hover_text" class="b_Caves">
+        <a href="caves.html">
+          <img src="images/block_diamond_ore.png" alt="A button with Minecraft's diamond ore texture.">
+          <span class="tooltip" id="bottom">CAVES</span>
+        </a>
+      </div>
+      <div class="hover_text" class="b_Oceans">
+        <a href="oceans.html">
+          <img src="images/block_prismarine.png" alt="A button with Minecraft's prismarine texture.">
+          <span class="tooltip" id="bottom">OCEANS</span>
+        </a>
+      </div>
+      <div class="hover_text" class="b_Nether">
+        <a href="nether.html">
+          <img src="images/block_quartz_ore.png" alt="A button with Minecraft's nether quartz texture.">
+          <span class="tooltip" id="bottom">NETHER</span>
+        </a>
+      </div>
+      <div class="hover_text" class="b_End">
+        <a href="end.html">
+          <img src="images/block_end_stone.png" alt="A button with Minecraft's end stone texture.">
+          <span class="tooltip" id="bottom">END</span>
+        </a>
+      </div>   
+    </nav>
+    <img src="images/chest_closed.png" alt="minecraft chest mobile nav bar" id = "chest">
+    <div id="chest_gui">
+      <a href="forests.html">
+      <img src="images/3d_block_azalea.png" alt="3d azalea block from minecraft"></a>
+       <a href="caves.html">
+      <img src="images/3d_block_diamond_ore.webp" alt="3d diamond ore block from minecraft"></a>
+          <a href="oceans.html">
+      <img src="images/3d_block_prismarine.webp" alt="3d prismarine block from minecraft"></a>
+             <a href="nether.html">
+       <img src="images/3d_block_nether_quartz.webp" alt="3d nether quartz block from minecraft"></a>
+                <a href="end.html">
+       <img src="images/3d_block_end_stone.webp" alt="3d end stone block from minecraft"></a>
+    </div>
+  </header>
+
+
+
+  <center>
+    <main>
+      <center>
+        <img src="images/title_caves.png" class="title"
+          alt="'Caves' written in a blocky, 3D font with a stone texture.">
+
+
+        <div class="black_border">
+          <div class="stone_box">
+
+            <h3>Minecraft's caves are full of both mystery and resources. Each world has many caves, filled to the brim
+              with many
+              caverns and cavities chock-full of precious minerals and archaic structures for the player to discover.
+              With the darkness of the caves, they are often home to plethoras of hostile mobs, making them a dangerous
+              place to be.
+            </h3>
+          </div>
+        </div>
+
+        <h1>CAVE BIOMES</h1>
+
+        <div class="black_border">
+          <div class="stone_box">
+
+            <div class="cave_biome">
+              <div class="biome_list default_class pixel_corners" onclick="toggle_normal()">
+                <img src="images/3d_block_stone.png" alt="Icon for normal caves biomes">
+                <div>
+                  <h2>NORMAL CAVES</h2>
+                  <p>THE TYPICAL, ORIGINAL CAVES</p>
+                </div>
+              </div>
+              <div class="biome_list drip_class pixel_corners" onclick="toggle_drip()">
+                <img src="images/3d_block_dripstone.png" alt="Icon for dripstone caves">
+                <div>
+                  <h2>DRIPSTONE CAVES</h2>
+                  <p>POINTY AND FULL OF PILLARS</p>
+                </div>
+              </div>
+              <div class="biome_list deep_class pixel_corners" onclick="toggle_deep()">
+                <img src="images/3d_block_deep_dark.png" alt="Icon for deep dark caves">
+                <div>
+                  <h2>DEEP DARK</h2>
+                  <p>WONDEROUS YET OMINOUS</p>
+                </div>
+              </div>
+              <div class="biome_list lush_class pixel_corners" onclick="toggle_lush()">
+                <img src="images/3d_block_moss.png" alt="Icon for lush cave biomes">
+                <div>
+                  <h2>LUSH CAVES</h2>
+                  <p>DIVERSE FAUNA AND FLORA</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="black_border">
+          <div class="stone_box">
+            <div id="normal_cave_display" class="normal_cave_display">
+              <div class="biome_info">
+                <div class="biome_card">
+                  <div>
+                    <div class="pixel_corners">
+                      <h1>NORMAL CAVES</h1>
+                    </div>
+
+                    <div class="image_border">
+
+                      <div class="item_frame_hor">
+                        <div class="item_frame_ver">
+                          <img src="images/biome_normal_cave.png" alt="Normal caves preview">
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="biome_card">
+                  <h3>DESCRIPTION:</h3>
+
+                  <p>Normal Caves within Minecraft are the most common cave biomes. There is not much interesting
+                    going on here, but they are cool. These kinds of caves are not very unique, just like Tristan's
+                    mother.</p>
+                  <h3>STRUCTURES:</h3>
+                  <div class="structures_grid">
+                    <a href="#monster_room">
+                      <div class="struct_mini_card">
+                        <img src="images/monster_spawner_icon.png" alt="Structure icon for Monster Rooms">
+                        <p>MONSTER ROOMS</p>
+                      </div>
+                    </a>
+                    <a href="#mineshaft">
+                      <div class="struct_mini_card">
+                        <img src="images/mineshaft_icon.png" alt="Structure icon for Mineshafts">
+                        <p>MINESHAFTS</p>
+                      </div>
+                    </a>
+                    <a href="#stronghold">
+                      <div class="struct_mini_card">
+                        <img src="images/stronghold_icon.png" alt="Structure icon for Strongholds">
+                        <p>STRONGHOLDS</p>
+                      </div>
+                    </a>
+                  </div>
+                  <h3>UNIQUE MOBS:</h3>
+                  <div class="unique_mobs">
+
+                    <a href="#first_row_mobs">
+                      <img src="images/bat_icon.png" alt="Mob icon for bats">
+                    </a>
+                    <a href="#first_row_mobs">
+                      <img src="images/cave_spider_icon.png" alt="Mob icon for cave spiders">
+                    </a>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+       
+            <div id="drip_cave_display" class="drip_cave_display hidden">
+              <div class="biome_info">
+                <div class="biome_card">
+                  <div>
+                    <div class="pixel_corners">
+                      <h1>DRIPSTONE CAVES</h1>
+                    </div>
+
+                    <div class="image_border">
+
+                      <div class="item_frame_hor">
+                        <div class="item_frame_ver">
+                    
+                          <img src="images/biome_dripstone_cave.png" alt="Dripstone caves preview">
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="biome_card">
+                  <h3>DESCRIPTION:</h3>
+                  <p>Huge and big and pointy. This biome has plenty of massive things inside of it. Just like Tristan's
+                    mother. Although it is a neat biome, there is not much interesting about it. Just like Tristan's
+                    mother.
+                  </p>
+                  <h3>STRUCTURES:</h3>
+                  <div class="structures_grid">
+                    <a href="#monster_room">
+                      <div class="struct_mini_card">
+                        <img src="images/monster_spawner_icon.png" alt="Structure icon for Monster Rooms">
+                        <p>MONSTER ROOMS</p>
+                      </div>
+                    </a>
+                    <a href="#mineshaft">
+                      <div class="struct_mini_card">
+                        <img src="images/mineshaft_icon.png" alt="Structure icon for Mineshafts">
+                        <p>MINESHAFTS</p>
+                      </div>
+                    </a>
+                    <a href="#stronghold">
+                      <div class="struct_mini_card">
+                        <img src="images/stronghold_icon.png" alt="Structure icon for Strongholds">
+                        <p>STRONGHOLDS</p>
+                      </div>
+                    </a>
+                    <a href="#amethyst_geode">
+                      <div class="struct_mini_card">
+                        <img src="images/amethyst_geode_icon.png" alt="Structure icon for Amethyst Geodes">
+                        <p>AMETHYST GEODES</p>
+                      </div>
+                    </a>
+                  </div>
+                  <h3>UNIQUE MOBS:</h3>
+                  <div class="unique_mobs">
+
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+        
+            <div id="lush_cave_display" class="lush_cave_display hidden">
+              <div class="biome_info">
+                <div class="biome_card">
+                  <div>
+                    <div class="pixel_corners">
+                      <h1>LUSH CAVES</h1>
+                    </div>
+
+                    <div class="image_border">
+
+                      <div class="item_frame_hor">
+                        <div class="item_frame_ver">
+                       
+                          <img src="images/biome_lush_cave.png" alt="Lush Caves preview">
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="biome_card">
+                  <h3>DESCRIPTION:</h3>
+                  <p>These caves are a vibe, just like Tristan's mother. Lush caves are full of plants and animals
+                    and are one of the most unique cave biomes. The ecosystem down there is like Tristan's mother.</p>
+                  <h3>STRUCTURES:</h3>
+                  <div class="structures_grid">
+                    <a href="#monster_room">
+                      <div class="struct_mini_card">
+                        <img src="images/monster_spawner_icon.png" alt="Structure icon for Monster Rooms">
+                        <p>MONSTER ROOMS</p>
+                      </div>
+                    </a>
+                    <a href="#mineshaft">
+                      <div class="struct_mini_card">
+                        <img src="images/mineshaft_icon.png" alt="Structure icon for Mineshafts">
+                        <p>MINESHAFTS</p>
+                      </div>
+                    </a>
+                    <a href="#stronghold">
+                      <div class="struct_mini_card">
+                        <img src="images/stronghold_icon.png" alt="Structure icon for Strongholds">
+                        <p>STRONGHOLDS</p>
+                      </div>
+                    </a>
+                    <a href="#amethyst_geode">
+                      <div class="struct_mini_card">
+                        <img src="images/amethyst_geode_icon.png" alt="Structure icon for Amethyst Geodes">
+                        <p>AMETHYST GEODES</p>
+                      </div>
+                    </a>
+                  </div>
+                  <h3>UNIQUE MOBS:</h3>
+                  <div class="unique_mobs">
+
+                    <a href="#first_row_mobs">
+                      <img src="images/axlotl_icon.png" alt="Mob icon for axolototltlys">
+                    </a>
+                    <a href="#second_row_mobs">
+                      <img src="images/glow_squid_icon.png" alt="Mob icon for glow squids">
+                    </a>
+                    <a href="#second_row_mobs">
+
+                      <img src="images/tropical_fish_icon.png" alt="Mob icon for tropical fish">
+                    </a>
+
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          
+            <div id="deep_cave_display" class="deep_cave_display hidden">
+              <div class="biome_info">
+                <div class="biome_card">
+                  <div>
+                    <div class="pixel_corners">
+                      <h1>DEEP DARK</h1>
+                    </div>
+
+                    <div class="image_border">
+
+                      <div class="item_frame_hor">
+                        <div class="item_frame_ver">
+                       
+                          <img src="images/biome_deep_dark.png" alt="Deep Dark caves preview">
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="biome_card">
+                  <h3>DESCRIPTION:</h3>
+                  <p>This biome, is dark and deep on the inside. Just like Tristan's mother. The most unique of any of
+                    the cave biomes. Very scary, dangerous, but also its content and structures are incredibly
+                    valuable.</p>
+                  <h3>STRUCTURES:</h3>
+                  <div class="structures_grid">
+                    <a href="#monster_room">
+                      <div class="struct_mini_card">
+                        <img src="images/monster_spawner_icon.png" alt="Structure icon for Monster Rooms">
+                        <p>MONSTER ROOMS</p>
+                      </div>
+                    </a>
+                    <a href="#ancient_city">
+                      <div class="struct_mini_card">
+                        <img src="images/ancient_city_icon.png" alt="Structure icon for Ancient cities">
+                        <p>ANCIENT CITIES</p>
+                      </div>
+                    </a>
+                    <a href="#stronghold">
+                      <div class="struct_mini_card">
+                        <img src="images/stronghold_icon.png" alt="Structure icon for Strongholds">
+                        <p>STRONGHOLDS</p>
+                      </div>
+                    </a>
+                  </div>
+                  <h3>UNIQUE MOBS:</h3>
+                  <div class="unique_mobs">
+                    <a href="#second_row_mobs">
+
+                      <img src="images/warden_icon.png" alt="Mob icon for wardens">
+                    </a>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <h1>ORES</h1>
+
+        <div class="ore_info">
+          <div class="pixel_corners" id="ores_name">
+            <p>ICON</p>
+          </div>
+          <div class="pixel_corners" id="ores_name">
+            <p>NAME</p>
+          </div>
+          <div class="pixel_corners" id="ores_name">
+            <p>TOOL</p>
+          </div>
+          <div class="pixel_corners" id="ores_name">
+            <p>Y-LEVELS</p>
+          </div>
+        </div>
+
+        <div class="black_border">
+          <div class="stone_box" id="ore_box">
+            <div class="ore_info ore_bg">
+              <img src="images/3d_block_coal_ore_default.png" class="ores_info_img" id="coal" alt="coal ore">
+              <p>Coal</p>
+              <p>Wooden Pickaxe</p>
+              <p>256 ~ 0</p>
+            </div>
+
+            <div class="ore_info ore_bg">
+              <img src="images/3d_block_copper_ore_default.png" class="ores_info_img" id="copper" alt="copper ore">
+              <p>Copper</p>
+              <p>Stone Pickaxe</p>
+              <p>112 ~ -16</p>
+            </div>
+
+            <div class="ore_info ore_bg">
+              <img src="images/3d_block_iron_ore_default.png" class="ores_info_img" id="iron" alt="iron ore">
+              <p>Iron</p>
+              <p>Stone Pickaxe</p>
+              <p>-64 ~ -256</p>
+            </div>
+
+            <div class="ore_info ore_bg">
+              <img src="images/3d_block_lapis_ore_default.png" class="ores_info_img" id="lapis" alt="lapis ore">
+              <p>Lapis Lazuli</p>
+              <p>Stone Pickaxe</p>
+              <p>64 ~ -64</p>
+            </div>
+
+            <div class="ore_info ore_bg">
+              <img src="images/3d_block_redstone_ore_default.png" class="ores_info_img" id="redstone"
+                alt="redstone ore">
+              <p>Redstone</p>
+              <p>Iron Pickaxe</p>
+              <p>16 ~ -64</p>
+            </div>
+
+
+            <div class="ore_info ore_bg">
+              <img src="images/3d_block_gold_ore_default.png" class="ores_info_img" id="gold" alt="gold ore">
+              <p>Gold</p>
+              <p>Iron Pickaxe</p>
+              <p>32 ~ -64</p>
+            </div>
+
+            <div class="ore_info ore_bg">
+              <img src="images/3d_block_diamond_ore_default.png" class="ores_info_img" id="diamond" alt="diamond ore">
+              <p>Diamond</p>
+              <p>Iron Pickaxe</p>
+              <p>16 ~ -64</p>
+            </div>
+
+            <div class="ore_info ore_bg">
+              <img src="images/3d_block_emerald_ore_default.png" class="ores_info_img" id="emerald" alt="emerald ore">
+              <p>Emerald</p>
+              <p>Iron Pickaxe</p>
+              <p>256 ~ -16</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="monster_room">
+          <img src="images/black_image.png" id="mineshaft" alt="blank iamge">
+        </div>
+
+        <h1>STRUCTURES</h1>
+
+        <div class="structure_grid">
+          <div class="black_border first_struct_box" id="amethyst_geode">
+            <div class="stone_box">
+              <div class="structure_info">
+                <div class="image_border">
+                  <div class="item_frame_hor">
+                    <div class="item_frame_ver">
+                      <img src="images/struct_monster_room.png" alt="Monster room preview">
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>MONSTER ROOM</h3>
+                  <p>Monster rooms are dangerous rooms scattered around the occasional cave. Within them is a monster
+                    spawner and loot.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="black_border second_struct_box" id="stronghold">
+            <div class="stone_box">
+              <div class="structure_info">
+                <div class="image_border">
+                  <div class="item_frame_hor">
+                    <div class="item_frame_ver">
+                      <img src="images/struct_mineshaft.png" alt="Mineshaft preview">
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>MINESHAFT</h3>
+                  <p>These long abandoned mines are mazes of track and stone. Within the average mineshaft, there is
+                    tons of loot and ore.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="black_border first_struct_box" id="ancient_city">
+            <div class="stone_box">
+              <div class="structure_info">
+                <div class="image_border">
+                  <div class="item_frame_hor">
+                    <div class="item_frame_ver">
+                      <img src="images/struct_amethyst.png" alt="Amethyst geode preview">
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>AMETHYST GEODE</h3>
+                  <p>Very purple and very pretty. These geodes are full of amethyst minerals, kind of self-explanatory.
+                    The amethyst is very cool and purple.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="black_border second_struct_box">
+            <div class="stone_box">
+              <div class="structure_info">
+                <div class="image_border">
+                  <div class="item_frame_hor">
+                    <div class="item_frame_ver">
+                      <img src="images/struct_stronghold.png" alt="Stronghold preview">
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>STRONGHOLD</h3>
+                  <p>Abandoned underground fortresses full of mystery and knowledge. Strongholds hold the portal to
+                    another dimension within, <a href="end.html">The End</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ancient_city_info">
+          <img src="images/black_image.png" id="struct_info_blank_img_die_murder" alt="blank image">
+          <div class="black_border">
+            <div class="stone_box" id="ancient_city_border">
+              <div class="structure_info">
+                <div class="image_border" id="border_thing">
+                  <div class="item_frame_hor">
+                    <div class="item_frame_ver">
+                      <img src="images/struct_ancient_city.png" alt="Ancient city preview">
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3>ANCIENT CITY</h3>
+                  <p>Monolithic in size, ancient cities are a dangerous place to be. Yet they are full of incredibly
+                    valuable loot. These cities are inhabited by the strongest mob, wardens, making exploring dangerous.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="images/black_image.png" id="struct_info_blank_img_die_murder" alt="blank image">
+
+        </div>
+
+        <div id="first_row_mobs">
+          <h1>UNIQUE MOBS</h1>
+        </div>
+
+        <div class="black_border">
+          <div class="stone_box">
+            <div class="unique_mob_grid">
+              <div class="unique_mob_card">
+                <h3>Bat</h3>
+                <p>This little fellow flaps and flaps and flaps!</p>
+                <img src="images/bat.gif" alt="bat mob">
+
+              </div>
+
+              <div class="unique_mob_card">
+                <h3>Cave Spider</h3>
+                <p>When you encounter one, be sure to have milk! </p>
+                <img src="images/cave_spider.gif" alt="cave spider mob">
+
+              </div>
+
+              <div class="unique_mob_card">
+                <h3>Axolotl</h3>
+                <p>Those guys are so cool. You can get one as a pet.</p>
+                <img src="images/axolotl.gif" alt="axolotl mob">
+
+              </div>
+
+              <div class="unique_mob_card" id="second_row_mobs">
+                <h3>Glow Squid</h3>
+                <p>How did these guys win the mob race!? Interesting.</p>
+                <img src="images/glow_squid.gif" alt="glow squid mob">
+
+              </div>
+
+              <div class="unique_mob_card" id="second_row_mobs">
+                <h3>Tropical Fish</h3>
+                <p>It's like fish but they're tropical.</p>
+                <img src="images/tropical_fish.gif" alt="tropical fish mob">
+
+              </div>
+
+              <div class="unique_mob_card" id="second_row_mobs">
+                <h3>Warden</h3>
+                <p>It will kill everyone a lot. Bring a bed.</p>
+                <img src="images/warden.gif" alt="warden mob">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </center>
+    </main>
+  </center>
+
+
+
+  <footer>
+    <p>IMDvengers - copyright 2024</p>
+  </footer>
+  <script src="scripts/cave_script.js"></script>
+  <script src="scripts/script.js"></script>
+
+</body>
+
+</html>

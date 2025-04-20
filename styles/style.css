@@ -1,0 +1,683 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url('/images/panorama_forest.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  background-attachment: fixed;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+header {
+  background-image: url(/images/block_dirt_dark.png);
+  background-size: 32px;
+  height: 60px;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  border-bottom: solid 2px black;
+}
+
+header img {
+  height: 60px;
+  margin: 0px;
+}
+
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-image: url(/images/block_dirt_dark.png);
+  background-size: 32px;
+  transform: translate(0px, 50px);
+  width: auto;
+  border-top: solid 2px black;
+
+}
+
+footer>p {
+  color: white;
+}
+
+.n_Grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas: " biomes . . ";
+}
+
+.b_Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: " forest cave nether end ";
+  margin-right: 20px;
+}
+
+.b_Biomes {
+  grid-area: biomes;
+}
+
+.b_Forests {
+  grid-area: forest;
+}
+
+.b_Caves {
+  grid-area: cave;
+}
+
+.b_Nether {
+  grid-area: nether;
+}
+
+.b_End {
+  grid-area: end;
+}
+
+#t_left {
+  top: 50px;
+  left: 100px;
+}
+
+@media screen and (max-width: 710px) {
+  .b_Grid {
+    display: none;
+  }
+
+  .n_Grid {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+
+  header {
+    width: initial;
+  }
+
+  .title {
+    object-fit: contain;
+    width: 100%;
+    max-height: 100%;
+  }
+
+}
+
+nav img {
+  height: 36px;
+  margin-top: 10px;
+  margin-right: 20px;
+  float: right;
+  border: solid 2px black;
+}
+
+#logo {
+  float: left;
+  margin-left: 10px;
+}
+
+#chest {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  padding-inline: 10px;
+  display: none;
+  z-index: 3;
+  transform: translate(-20px, 0);
+}
+
+#chest_gui {
+  width: 68px;
+  padding-block: 20px;
+  padding-top: 60px;
+  padding-bottom: 0px;
+  justify-items: center;
+  background-color: #c6c6c6;
+  display: none;
+  border-top: 4px solid white;
+  border-left: 4px solid white;
+  border-bottom: 4px solid #404040;
+  border-right: 4px solid #404040;
+  z-index: 2;
+  transform: translate(-20px, 0);
+}
+
+#chest_gui img {
+  background-color: #8b8b8b;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+  border-top: 4px solid #404040;
+  border-left: 4px solid #404040;
+
+}
+
+#chest_gui img:hover {
+  opacity: 0.4;
+}
+
+main {
+  transform: translate(0, 60px);
+  width: calc(100vw - 120px);
+  min-width: 640px;
+  max-width: 1000px;
+}
+
+.title {
+  height: 200px;
+  margin-bottom: -20px;
+}
+
+
+@font-face {
+  font-family: 'Minecraft';
+  src: url(minecraft_font.ttf);
+
+}
+
+@font-face {
+  font-family: 'Header';
+  src: url(/fonts/new_minecraft_font.ttf);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: Minecraft, monospace;
+  color: white;
+  text-shadow: 1px 1px 1px black, 1px 1px 1px black;
+  line-height: 1.1;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 32px;
+  font-family: 'Header', monospace;
+  letter-spacing: 3px;
+}
+
+h3 {
+  font-size: 26px;
+  font-family: 'Header', monospace;
+  letter-spacing: 3px;
+}
+
+p {
+  font-size: 22px;
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  transition: 0.3s;
+
+  text-decoration: none;
+  color: #00BEBE;
+  text-shadow: 1px 1px 1px black, 1px 1px 1px black;
+}
+
+a:visited {
+  transition: 0.3s;
+
+  color: #FE3FFE;
+}
+
+a:hover {
+  transition: 0.3s;
+  color: #FEFE3F;
+}
+
+.dark_red {
+  color: #BE0000;
+}
+
+.red {
+  color: #FE3F3F;
+}
+
+.dark_yellow {
+  color: #D9A334;
+}
+
+.yellow {
+  color: #FEFE3F;
+}
+
+.dark_green {
+  color: #00BE00;
+}
+
+.green {
+  color: #3FFE3F;
+}
+
+.dark_teal {
+  color: #00BEBE;
+}
+
+.teal {
+  color: #3FFEFE;
+}
+
+.dark_blue {
+  color: #0000BE;
+}
+
+.blue {
+  color: #3F3FFE;
+}
+
+.dark_pink {
+  color: #BE00BE;
+}
+
+.pink {
+  color: #FE3FFE;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.grey {
+  color: #BEBEBE;
+}
+
+.dark_grey {
+  color: #3F3F3F;
+}
+
+.black {
+  color: #000000;
+}
+
+.stone_box {
+  background-image: url(/images/block_stone.png);
+  background-size: 32px;
+  padding: 20px;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.5);
+  border-right: solid 4px rgba(0, 0, 0, 0.5);
+  border-top: solid 4px rgba(255, 255, 255, 0.8);
+  border-left: solid 4px rgba(255, 255, 255, 0.8);
+}
+
+.black_border {
+  border: solid 6px black;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  width: 640px;
+}
+
+.carousel_centre {
+  height: 300px;
+  width: 300px;
+  border: solid 18px black;
+  border-bottom: solid 20px black;
+  z-index: 0.9;
+  transform: translate(0px, -592px);
+  margin-bottom: -590px;
+}
+
+
+.carousel_right,
+.carousel_left {
+  height: 260px;
+  width: 260px;
+  border: solid 18px black;
+  border-bottom: solid 20px black;
+  z-index: 0.8;
+}
+
+.carousel_left {
+  transform: translate(-100px, 20px);
+}
+
+.carousel_right {
+  transform: translate(100px, -276px);
+}
+
+.carousel div img,
+.big_img img {
+  width: 100%;
+  overflow: hidden;
+  size: cover;
+}
+
+.big_img img {
+  max-height: 56vh;
+}
+
+.big_img {
+  border: solid 18px black;
+  border-bottom: solid 20px black;
+  max-height: 56vh;
+}
+
+.small_img img {
+  height: 160px;
+  width: 160px;
+}
+
+.small_img {
+  border: solid 18px black;
+  border-bottom: solid 20px black;
+  height: 160px;
+  width: 160px;
+  float: left;
+  margin-right: 20px;
+}
+
+.small_img_grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-auto-columns: auto;
+  grid-auto-rows: auto;
+  grid-gap: 20px;
+}
+
+.small_img_1 {
+  grid-row: 1/2;
+}
+
+.small_img_2 {
+  grid-row: 2/3;
+}
+
+.small_img_3 {
+  grid-row: 3/4;
+}
+
+.small_img_4 {
+  grid-row: 4/5;
+}
+
+.small_img_5 {
+  grid-row: 5/6;
+}
+
+.small_img_6 {
+  grid-row: 6/7;
+}
+
+.small_img_7 {
+  grid-row: 7/8;
+}
+
+.small_img_8 {
+  grid-row: 8/9;
+}
+
+.small_img_1,
+.small_img_2,
+.small_img_3,
+.small_img_4,
+.small_img_5,
+.small_img_6,
+.small_img_7,
+.small_img_8 {
+  grid-column: 1/2;
+}
+
+.small_text_1,
+.small_text_2,
+.small_text_3,
+.small_text_4,
+.small_text_5,
+.small_text_6,
+.small_text_7,
+.small_text_8 {
+  grid-column: 2/3;
+}
+
+.small_text_1 {
+  grid-row: 1/2;
+}
+
+.left {
+  text-align: left;
+}
+
+.item_frame_hor {
+  border-image: repeating-linear-gradient(to top, #E7D49B 0, #E7D49B 6px, #D5C184 6px, #D5C184 12px, #E7D49B 12px, #E7D49B 18px, #CAB577 18px, #CAB577 20px);
+  border-image-slice: 36;
+  border-image-width: 100% 100%;
+  border-image-outset: 12px 12px 12px 12px;
+}
+
+.item_frame_ver {
+  border-image: repeating-linear-gradient(to right, #E7D49B 0, #E7D49B 6px, #D5C184 6px, #D5C184 12px, #E7D49B 12px, #E7D49B 18px, #CAB577 18px, #CAB577 20px);
+  border-image-slice: 36;
+  border-image-width: 100% 100%;
+  border-image-outset: 12px 0px 12px 0px;
+}
+
+
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 64px;
+  color: white;
+  font-size: 12px;
+  background-color: #192733;
+  border: 1px solid white;
+  padding: 5px;
+  transform: translate(-18px, 4px);
+  font-family: 'Header', monospace;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.hover_text:hover .tooltip {
+  visibility: visible;
+}
+
+#bottom {
+  top: 50px;
+}
+
+
+.hover_text {
+  position: relative;
+  display: inline-block;
+  font-family: 'Minecraft';
+  text-align: center;
+}
+
+@media screen and (max-width: 710px) {
+
+  #chest {
+    display: block;
+  }
+}
+
+
+.biome_list {
+  background: #222222;
+
+  display: grid;
+  grid-template-columns: 0.8fr 3fr;
+  text-align: left;
+  margin: 5px;
+}
+
+.pixel_corners,
+.pixel_corners--wrapper {
+  clip-path: polygon(0px calc(100% - 16px),
+      4px calc(100% - 16px),
+      4px calc(100% - 8px),
+      8px calc(100% - 8px),
+      8px calc(100% - 4px),
+      16px calc(100% - 4px),
+      16px 100%,
+      calc(100% - 16px) 100%,
+      calc(100% - 16px) calc(100% - 4px),
+      calc(100% - 8px) calc(100% - 4px),
+      calc(100% - 8px) calc(100% - 8px),
+      calc(100% - 4px) calc(100% - 8px),
+      calc(100% - 4px) calc(100% - 16px),
+      100% calc(100% - 16px),
+      100% 16px,
+      calc(100% - 4px) 16px,
+      calc(100% - 4px) 8px,
+      calc(100% - 8px) 8px,
+      calc(100% - 8px) 4px,
+      calc(100% - 16px) 4px,
+      calc(100% - 16px) 0px,
+      16px 0px,
+      16px 4px,
+      8px 4px,
+      8px 8px,
+      4px 8px,
+      4px 16px,
+      0px 16px);
+  position: relative;
+  background-color: #222222;
+}
+
+.pixel_corners,
+.pixel_corners--wrapper {
+  clip-path: polygon(0px calc(100% - 8px),
+      4px calc(100% - 8px),
+      4px calc(100% - 4px),
+      8px calc(100% - 4px),
+      8px 100%,
+      calc(100% - 8px) 100%,
+      calc(100% - 8px) calc(100% - 4px),
+      calc(100% - 4px) calc(100% - 4px),
+      calc(100% - 4px) calc(100% - 8px),
+      100% calc(100% - 8px),
+      100% 8px,
+      calc(100% - 4px) 8px,
+      calc(100% - 4px) 4px,
+      calc(100% - 8px) 4px,
+      calc(100% - 8px) 0px,
+      8px 0px,
+      8px 4px,
+      4px 4px,
+      4px 8px,
+      0px 8px);
+  position: relative;
+}
+
+.pixel_corners {
+  border: 8px solid transparent;
+}
+
+.pixel_corners--wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+
+.pixel_corners--wrapper .pixel_corners {
+  display: block;
+  clip-path: polygon(8px 12px,
+      12px 12px,
+      12px 8px,
+      calc(100% - 12px) 8px,
+      calc(100% - 12px) 12px,
+      calc(100% - 8px) 12px,
+      calc(100% - 8px) calc(100% - 12px),
+      calc(100% - 12px) calc(100% - 12px),
+      calc(100% - 12px) calc(100% - 8px),
+      12px calc(100% - 8px),
+      12px calc(100% - 12px),
+      8px calc(100% - 12px));
+}
+
+.pixel_corners::after,
+.pixel_corners--wrapper::after {
+  content: "";
+  position: absolute;
+  clip-path: polygon(0px calc(100% - 8px),
+      4px calc(100% - 8px),
+      4px calc(100% - 4px),
+      8px calc(100% - 4px),
+      8px 100%,
+      calc(100% - 8px) 100%,
+      calc(100% - 8px) calc(100% - 4px),
+      calc(100% - 4px) calc(100% - 4px),
+      calc(100% - 4px) calc(100% - 8px),
+      100% calc(100% - 8px),
+      100% 8px,
+      calc(100% - 4px) 8px,
+      calc(100% - 4px) 4px,
+      calc(100% - 8px) 4px,
+      calc(100% - 8px) 0px,
+      8px 0px,
+      8px 4px,
+      4px 4px,
+      4px 8px,
+      0px 8px,
+      0px 50%,
+      4px 50%,
+      4px 8px,
+      8px 8px,
+      8px 4px,
+      calc(100% - 8px) 4px,
+      calc(100% - 8px) 8px,
+      calc(100% - 4px) 8px,
+      calc(100% - 4px) calc(100% - 8px),
+      calc(100% - 8px) calc(100% - 8px),
+      calc(100% - 8px) calc(100% - 4px),
+      8px calc(100% - 4px),
+      8px calc(100% - 8px),
+      4px calc(100% - 8px),
+      4px 50%,
+      0px 50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #595959;
+  display: block;
+  pointer-events: none;
+}
+
+
+
+.pixel_corners::after {
+  margin: -8px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-image: url(/images/block_stone.png);
+  background-size: 32px;
+  border-top: solid 2px rgba(0, 0, 0, 0.5);
+  border-left: solid 2px rgba(0, 0, 0, 0.5);
+  border-bottom: solid 2px rgba(255, 255, 255, 0.8);
+  border-right: solid 2px rgba(255, 255, 255, 0.8);
+  outline: 4px solid black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: url(/images/block_stone.png);
+  background-size: 32px;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.5);
+  border-right: solid 2px rgba(0, 0, 0, 0.5);
+  border-top: solid 2px rgba(255, 255, 255, 0.8);
+  border-left: solid 2px rgba(255, 255, 255, 0.8);
+  outline: 4px solid black;
+}
+
+@media screen and (max-width: 710px) {
+  .carousel {
+    width: initial;
+  }
+}

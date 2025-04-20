@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  <link rel="stylesheet" type="text/css" href="styles/forests_style.css" />
+  <link rel="icon" type="image/x-icon" href="images/apple.png">
+  <title>Forests</title>
+</head>
+
+<body>
+  <header class="n_Grid">
+    <div class="hover_text" class="b_Biomes">
+      <a href="index.html">
+        <img src="images/title_main.png" id="logo" alt="The site's logo.">
+        <span class="tooltip" id="t_left">BIOMES</span>
+      </a>
+    </div>
+    <br style="padding:50%;">
+    <nav class="b_Grid">
+      <div class="hover_text" class="b_Forests">
+        <a href="forests.html">
+          <img src="images/block_azalea_leaves.png" alt="A button with Minecraft's azalea leaf texture.">
+          <span class="tooltip" id="bottom">FORESTS</span>
+        </a>
+      </div>
+      <div class="hover_text" class="b_Caves">
+        <a href="caves.html">
+          <img src="images/block_diamond_ore.png" alt="A button with Minecraft's diamond ore texture.">
+          <span class="tooltip" id="bottom">CAVES</span>
+        </a>
+      </div>
+      <div class="hover_text" class="b_Oceans">
+        <a href="oceans.html">
+          <img src="images/block_prismarine.png" alt="A button with Minecraft's prismarine texture.">
+          <span class="tooltip" id="bottom">OCEANS</span>
+        </a>
+      </div>
+      <div class="hover_text" class="b_Nether">
+        <a href="nether.html">
+          <img src="images/block_quartz_ore.png" alt="A button with Minecraft's nether quartz texture.">
+          <span class="tooltip" id="bottom">NETHER</span>
+        </a>
+      </div>
+      <div class="hover_text" class="b_End">
+        <a href="end.html">
+          <img src="images/block_end_stone.png" alt="A button with Minecraft's end stone texture.">
+          <span class="tooltip" id="bottom">END</span>
+        </a>
+      </div>
+    </nav>
+    <img src="images/chest_closed.png" alt="minecraft chest mobile nav bar" id="chest">
+    <div id="chest_gui">
+      <a href="forests.html">
+        <img src="images/3d_block_azalea.png" alt="3d azalea block from minecraft"></a>
+      <a href="caves.html">
+        <img src="images/3d_block_diamond_ore.webp" alt="3d diamond ore block from minecraft"></a>
+      <a href="oceans.html">
+        <img src="images/3d_block_prismarine.webp" alt="3d prismarine block from minecraft"></a>
+      <a href="nether.html">
+        <img src="images/3d_block_nether_quartz.webp" alt="3d nether quartz block from minecraft"></a>
+      <a href="end.html">
+        <img src="images/3d_block_end_stone.webp" alt="3d end stone block from minecraft"></a>
+    </div>
+  </header>
+
+
+
+  <center>
+    <main>
+      <center>
+        <img src="images/title_forests.png" class="title"
+          alt="'Forests' written in a blocky, 3D font with a stone texture.">
+        <div class="black_border">
+          <div class="stone_box">
+            <h3>Minecraft's forests are common biomes full of important resources, farmable mobs, and beautiful scenery.
+              Many of these biomes contain unique tree types, special crops, and rare structures that make them worth
+              exploring.</h3>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="black_border">
+          <div class="stone_box">
+            <div class="forest_biome">
+
+              <div class="biome_list birch_class pixel_corners" onclick="toggle_birch()">
+                <img src="images/3D_block_birch.png" alt="3D birch log.">
+                <div>
+                  <h2>BIRCH FORESTS</h2>
+                  <p>Love it or hate it</p>
+                </div>
+              </div>
+
+              <div class="biome_list cherry_class pixel_corners" onclick="toggle_cherry()">
+                <img src="images/3D_block_cherry.png" alt="3D cherry log.">
+                <div>
+                  <h2>CHERRY GROVE</h2>
+                  <p>Pretty in pink</p>
+                </div>
+              </div>
+
+              <div class="biome_list dark_class pixel_corners" onclick="toggle_dark()">
+                <img src="/images/3D_block_mushroom.png" alt="3D red mushroom block.">
+                <div>
+                  <h2>DARK FOREST</h2>
+                  <p>Dark and dangerous</p>
+                </div>
+              </div>
+
+              <div class="biome_list flower_class pixel_corners" onclick="toggle_flower()">
+                <img src="images/3D_block_nest.png" alt="3D bee's nest.">
+                <div>
+                  <h2>FLOWER FOREST</h2>
+                  <p>Bees?</p>
+                </div>
+              </div>
+
+              <div class="biome_list forest_class pixel_corners" onclick="toggle_forest()">
+                <img src="images/3d_block_azalea.png" alt="3D azalea leaf block.">
+                <div>
+                  <h2>FOREST</h2>
+                  <p>The classic</p>
+                </div>
+              </div>
+
+              <div class="biome_list jungle_class pixel_corners" onclick="toggle_jungle()">
+                <img src="images/3D_block_bamboo.png" alt="3D bamboo plank block.">
+                <div>
+                  <h2>JUNGLES</h2>
+                  <p>Full of life</p>
+                </div>
+              </div>
+
+              <div class="biome_list taiga_class pixel_corners" onclick="toggle_taiga()">
+                <img src="images/3D_block_spruce.png" alt="3D spruce log block.">
+                <div>
+                  <h2>TAIGAS</h2>
+                  <p>Source of spruce</p>
+                </div>
+              </div>
+              <div class="biome_list wooded_class pixel_corners" onclick="toggle_wooded()">
+                <img src="images/3D_block_terracotta.png" alt="3D terracotta block.">
+                <div>
+                  <h2>WOODED BADLANDS</h2>
+                  <p>Dry and sparse</p>
+                </div>
+              </div>
+
+
+
+
+              <div id="biome_blurb">
+                <div id="birch_display">
+                  <div class="birch_display">
+                    <div class="biome_info">
+                      <div class="biome_card">
+                        <div>
+                          <div class="pixel_corners">
+                            <h1>BIRCH FORESTS</h1>
+                          </div>
+                          <div class="image_border">
+                            <div class="item_frame_hor">
+                              <div class="item_frame_ver">
+                                <img src="images/panorama_birch.avif" alt="Tall birch trees on a hill at daytime.">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="biome_card">
+                        <h3>DESCRIPTION:</h3>
+                        <p>The foliage in birch forests biomes (Birch Forests and Old Growth Birch Forests) is slightly
+                          desaturated and players have mixed opinions on the native wood type, but these biomes are
+                          undoubtedly rich in natural resources. The typical tree height is 7 blocks, but you may find
+                          11
+                          block tall trees in the Old Growth Birch Forests.</p>
+                        <h3>RESOURCES:</h3>
+                        <div class="unique_mobs">
+                          <img src="images/sapling_birch.png" alt="A birch sapling.">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="cherry_display">
+                  <div class="cherry_display">
+                    <div class="biome_info">
+                      <div class="biome_card">
+                        <div>
+                          <div class="pixel_corners">
+                            <h1>CHERRY GROVE</h1>
+                          </div>
+                          <div class="image_border">
+                            <div class="item_frame_hor">
+                              <div class="item_frame_ver">
+                                <img src="images/panorama_cherry.webp" alt="Tall birch trees on a hill at daytime.">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="biome_card">
+                        <h3>DESCRIPTION:</h3>
+                        <p>The prettiest, pinkest, and most recently added forest biome. While this biome isn't very
+                          diverse, the native wood and foliage are prized by builders. The cherry leaves are also
+                          considered 'flowers', which makes it quite attractive for bees and beekeepers alike.</p>
+                        <h3>RESOURCES:</h3>
+                        <div class="unique_mobs">
+                          <img src="images/sapling_cherry.png" alt="A cherry sapling.">
+                          <img src="images/petals.png" alt="Pink cherry petals.">
+                          <img src="images/block_nest.png" alt="A bee's nest.">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div id="dark_display">
+                  <div class="dark_display">
+                    <div class="biome_info">
+                      <div class="biome_card">
+                        <div>
+                          <div class="pixel_corners">
+                            <h1>DARK FOREST</h1>
+                          </div>
+                          <div class="image_border">
+                            <div class="item_frame_hor">
+                              <div class="item_frame_ver">
+                                <img src="images/panorama_dark.webp"
+                                  alt="An old growth taiga biome on the edge of a body of water.">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="biome_card">
+                        <h3>DESCRIPTION:</h3>
+                        <p>Dark forests are very densely forested biomes filled with dark oak trees and giant red
+                          mushrooms. These are dangerous to explore in, but the rewards are great; They are the only
+                          biomes where woodland mansions generate, and they are dark enough in the daytime that hostile
+                          mobs may spawn.</p>
+                        <h3>RESOURCES:</h3>
+                        <div class="unique_mobs">
+                          <img src="images/sapling_dark.png" alt="A dark oak sapling.">
+                          <img src="images/mushroom_red.png" alt="A red mushroom.">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="flower_display">
+                  <div class="flower_display">
+                    <div class="biome_info">
+                      <div class="biome_card">
+                        <div>
+                          <div class="pixel_corners">
+                            <h1>FLOWER FOREST</h1>
+                          </div>
+                          <div class="image_border">
+                            <div class="item_frame_hor">
+                              <div class="item_frame_ver">
+                                <img src="images/panorama_flower.avif"
+                                  alt="An aerial shot of a flower forest next to an ocean and swamp biome.">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="biome_card">
+                        <h3>DESCRIPTION:</h3>
+                        <p>Flower forests are very similar to the standard forest biome, but they have slightly less
+                          tree growth and significantly more flower growth. In this biome, almost every flower type can
+                          spawn, and the bee population is significantly higher. Plus, rabbits can spawn here!</p>
+                        <h3>RESOURCES:</h3>
+                        <div class="unique_mobs">
+                          <img src="images/sapling_oak.png" alt="An oak sapling.">
+                          <img src="images/sapling_birch.png" alt="A birch sapling.">
+                          <img src="images/dandelion.png" alt="A dandelion.">
+                          <img src="images/block_nest.png" alt="A bee's nest.">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="forest_display">
+                  <div class="forest_display">
+                    <div class="biome_info">
+                      <div class="biome_card">
+                        <div>
+                          <div class="pixel_corners">
+                            <h1>FOREST</h1>
+                          </div>
+                          <div class="image_border">
+                            <div class="item_frame_hor">
+                              <div class="item_frame_ver">
+                                <img src="images/panorama_forest.jpg"
+                                  alt="An forest biome with a mix of short oak and birch trees.">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="biome_card">
+                        <h3>DESCRIPTION:</h3>
+                        <p>The simple forest biome is quite common, and is a good source of oak, birch, and livestock
+                          mobs. The dense foliage may be used as shelter by lingering hostile mobs, but isn't quite
+                          thick enough for them to spawn at daytime.</p>
+                        <h3>RESOURCES:</h3>
+                        <div class="unique_mobs">
+                          <img src="images/sapling_oak.png" alt="An oak sapling.">
+                          <img src="images/sapling_birch.png" alt="A birch sapling.">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="jungle_display">
+                  <div class="jungle_display">
+                    <div class="biome_info">
+                      <div class="biome_card">
+                        <div>
+                          <div class="pixel_corners">
+                            <h1>JUNGLES</h1>
+                          </div>
+                          <div class="image_border">
+                            <div class="item_frame_hor">
+                              <div class="item_frame_ver">
+                                <img src="images/panorama_jungle.webp"
+                                  alt="A wide shot of a jungle with a wiriver passing through it.">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="biome_card">
+                        <h3>DESCRIPTION:</h3>
+                        <p>Jungles are lush, brightly-coloured biomes that come in three varieties: the Sparse Jungle,
+                          the Bamboo Jungle, and regular Jungle. Jungle temples, parrots, ocelots, melons, and cocoa
+                          beans have a chance of spawning in all three, but the Bamboo Jungle is special, as both bamboo
+                          and pandas spawn there too.</p>
+                        <h3>RESOURCES:</h3>
+                        <div class="unique_mobs">
+                          <img src="images/sapling_jungle.png" alt="A jungle sapling.">
+                          <img src="images/block_podzol.png" alt="The side of a block of podzol.">
+                          <img src="images/cocoa.png" alt="Cocoa beans.">
+                          <img src="images/melon.png" alt="A slice of watermelon.">
+                          <img src="images/bamboo.png" alt="A stalk of bamboo.">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="taiga_display">
+                  <div class="taiga_display">
+                    <div class="biome_info">
+                      <div class="biome_card">
+                        <div>
+                          <div class="pixel_corners">
+                            <h1>TAIGAS</h1>
+                          </div>
+                          <div class="image_border">
+                            <div class="item_frame_hor">
+                              <div class="item_frame_ver">
+                                <img src="images/panorama_taiga.webp"
+                                  alt="An old growth taiga biome on the edge of a body of water.">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="biome_card">
+                        <h3>DESCRIPTION:</h3>
+                        <p>Taiga biomes are cold biomes populated with spruce trees, sweet berry bushes, and a few other
+                          uncommon natural blocks like podzol. There are two variants, the Snowy Taiga and the Old
+                          Growth Taiga. The latter is notable due to its massive, 2x2 spruce trees.</p>
+                        <h3>RESOURCES:</h3>
+                        <div class="unique_mobs">
+                          <img src="images/sapling_spruce.png" alt="A spruce sapling.">
+                          <img src="images/berry.png" alt="A sweet berry.">
+                          <img src="images/mushroom_brown.png" alt="A brown mushroom.">
+                          <img src="images/block_podzol.png" alt="The side of a block of podzol.">
+                          <img src="images/block_coarse.png" alt="The side of a block of coarse dirt.">
+                          <img src="images/snowball.png" alt="A snowball.">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="wooded_display">
+                  <div class="wooded_display">
+                    <div class="biome_info">
+                      <div class="biome_card">
+                        <div>
+                          <div class="pixel_corners">
+                            <h1>WOODED BADLANDS</h1>
+                          </div>
+                          <div class="image_border">
+                            <div class="item_frame_hor">
+                              <div class="item_frame_ver">
+                                <img src="images/panorama_wooded.webp"
+                                  alt="A sprawling wooded badlands biome with tall hills in the background.">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="biome_card">
+                        <h3>DESCRIPTION:</h3>
+                        <p>Wooded Badlands, previously referred to as the Mesa Forest Plateau, are sparse, oak-oly
+                          forests topping the hills of badlands biomes. These are rare, but their extreme arid
+                          environment gives them a very pleasing block palette.</p>
+                        <h3>RESOURCES:</h3>
+                        <div class="unique_mobs">
+                          <img src="images/sapling_oak.png" alt="An oak sapling.">
+                          <img src="images/block_terracotta.png" alt="The side of a block of terracotta.">
+                          <img src="images/block_coarse.png" alt="The side of a block of coarse dirt.">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+
+
+
+
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+
+        <div class="black_border">
+          <div class="stone_box">
+            <div class="carousel">
+              <h1 class="pixel_corners">STRUCTURES</h1>
+              <br>
+              <div class="carousel_left">
+                <div class="item_frame_hor">
+                  <div class="item_frame_ver">
+                    <img class="carousel_img" id="left_image" src="images/struct_woodland.png"
+                      alt="A woodland mansion in the middle of a dark forest. The mansion is considerably taller than the trees around it.">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel_right">
+                <div class="item_frame_hor">
+                  <div class="item_frame_ver">
+                    <img class="carousel_img" id="right_image" src="images/struct_jungle.png"
+                      alt="A jungle pyramid, partially on land and partially in water.">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel_centre">
+                <div class="item_frame_hor">
+                  <div class="item_frame_ver">
+                    <img class="carousel_img" id="big_image" src="images/struct_trail.png"
+                      alt="Trail ruins sticking out of the ground in a jungle biome.">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+
+              <img src="images/pixel_arrow_left.png" id="left_arrow" alt="left arrow" width="50px"
+                onclick="carouselLeft();">
+              <img src="images/pixel_arrow.png" id="right_arrow" alt="right arrow" width="50px"
+                onclick="carouselRight();">
+            </div>
+            <p class="structures">Trail Ruins are structures that spawn partially underground in Taigas, Jungles, and
+              Birch Forests. They are made of coloured terracotta blocks and mud bricks, and are covered in suspicious
+              sand, gravel, and dirt that have a chance of dropping items when brushed. These possible item drops
+              include dyes, pottery sherds, armour trims, and other miscellaneous items.</p>
+            <p class="structures">Woodland Mansions are 3-storey tall structures containing procedurally generated
+              rooms. These rooms contain unique (and sometimes random loot) as well as naturally-spawning Illagers and
+              Allays. These are similar to Nether Fortresses, in that you must fight for your treasure.</p>
+            <p class="structures">Jungle Pyramids are small structures spawning in Jungles and Bamboo Jungles, which
+              contain traps on the lower level. Beyond these traps (including a lever combination lock and a tripwire
+              boobytrap) you will find a chest full of ores, horse armour, and other loot.</p>
+          </div>
+        </div>
+
+
+
+        <div class="black_border">
+          <div class="stone_box">
+            <h1 class="pixel_corners">PLANTS</h1>
+            <div class="polaroid">
+              <div>
+                <div class="polaroid_img">
+                  <div class="item_frame_hor">
+                    <div class="polaroid_img_img" id="trees">
+                      <img class="polaroid_img" src="images/trees.gif" alt="A looping gif of various tree types.">
+                    </div>
+                  </div>
+                </div>
+                <h3>TREES</h3>
+                <p class="description">The one thing that every forest biome has in common is: trees! There are nine
+                  types of trees in Minecraft, with six (oak, birch, spruce, cherry, jungle, and dark oak) being native
+                  to forest biomes.</p>
+              </div>
+
+              <div>
+                <div class="polaroid_img">
+                  <div class="item_frame_hor">
+                    <div class="polaroid_img_img" id="flowers">
+                      <img class="polaroid_img" src="images/flowers.gif" alt="A looping gif of various flower types.">
+                    </div>
+                  </div>
+                </div>
+                <h3>FLOWERS</h3>
+                <p class="description">Nearly every kind of flower can be found in Minecraft's forest biomes. They are
+                  most abundant and varied in flower forests, but each biome contains its own selection of flowers. In
+                  the plain Forest biome, one can find roses, lilacs, peonies, and lilies of the valley.</p>
+              </div>
+
+              <div>
+                <div class="polaroid_img">
+                  <div class="item_frame_hor">
+                    <div class="polaroid_img_img" id="crops">
+                      <img class="polaroid_img" src="images/crops.gif"
+                        alt="A looping gif of various types of farmable plants/crops.">
+                    </div>
+                  </div>
+                </div>
+                <h3>HARVESTABLES</h3>
+                <p class="description">Taiga biomes and Jungle biomes contain many farmable plants, like cocoa, bamboo,
+                  pumpkins, and sweet berries. While most of these forest crops aren't too valuable on their own, they
+                  can all be used to craft important blocks and food items, as well as be used for decorating builds.
+                </p>
+              </div>
+            </div>
+
+
+
+            <h1 class="pixel_corners polaroid_header">MOBS</h1>
+            <div class="polaroid">
+              <div>
+                <div class="polaroid_img">
+                  <div class="item_frame_hor">
+                    <div class="polaroid_img_img" id="passive">
+                      <img class="polaroid_img" src="images/passive.gif" alt="A looping gif of passive mobs.">
+                    </div>
+                  </div>
+                </div>
+                <h3>PASSIVE MOBS</h3>
+                <p class="description">The vast majority of forest mobs are passive (will never become aggressive). All
+                  of the typical "farm" animals spawn in these biomes, but some less traditional ones (rabbits, foxes,
+                  and ocelots) are also native.</p>
+              </div>
+
+              <div>
+                <div class="polaroid_img">
+                  <div class="item_frame_hor">
+                    <div class="polaroid_img_img" id="neutral">
+                      <img class="polaroid_img" src="images/neutral.gif" alt="A looping gif of neutral animals.">
+                    </div>
+                  </div>
+                </div>
+                <h3>NEUTRAL MOBS</h3>
+                <p class="description">Neutral mobs are passive until they are hurt by a player. The only neutral mobs
+                  that spawn in forests are bees, pandas, and wolves (also a tameable mob).</p>
+              </div>
+
+              <div>
+                <div class="polaroid_img">
+                  <div class="item_frame_hor">
+                    <div class="polaroid_img_img" id="tameable">
+                      <img class="polaroid_img" src="images/tameable.gif" alt="A looping gif of tameable forest mobs.">
+                    </div>
+                  </div>
+                </div>
+                <h3>TAMEABLE MOBS</h3>
+                <p class="description">While most forest animals can become "trusting" of players, only a few can be
+                  truly tamed. This includes wolves and parrots, who can be made to sit down and stand up once tamed.
+                  Wolves spawn in Taigas and Forests, while parrots spawn exclusively in Jungles.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        </div>
+        </div>
+
+      </center>
+    </main>
+  </center>
+
+
+
+  <footer>
+    <p>IMDvengers - copyright 2024</p>
+  </footer>
+
+
+  <script src="scripts/script.js"></script>
+  <script src="scripts/forest_script.js"> </script>
+</body>
+
+</html>

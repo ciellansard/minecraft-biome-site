@@ -1,0 +1,396 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url('/images/panorama_nether.png');
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+header {
+  background-image: url(/images/block_dirt_dark.png);
+  background-size: 32px;
+  height: 60px;
+  width: 100vw;
+
+  position: fixed;
+  z-index: 1;
+  border-bottom: solid 2px black;
+}
+
+header img {
+  height: 60px;
+  margin: 0px;
+}
+
+.carousel_img {
+  object-fit: cover;
+}
+
+nav img {
+  height: 36px;
+  margin-top: 10px;
+  margin-right: 20px;
+  float: right;
+  border: solid 2px black;
+}
+
+#logo {
+  float: left;
+  margin-left: 10px;
+}
+
+main {
+  transform: translate(0, 60px);
+  width: calc(100vw - 120px);
+  min-width: 640px;
+  max-width: 1000px;
+}
+
+.title {
+  height: 200px;
+  margin-bottom: -20px;
+}
+
+
+
+h1 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+p {
+  font-size: 22px;
+}
+
+a {
+  text-decoration: none;
+  color: #00BEBE;
+  text-shadow: 1px 1px 1px black, 1px 1px 1px black;
+}
+
+a:visited {
+  color: #FE3FFE;
+}
+
+a:hover {
+  color: #FEFE3F;
+}
+
+.dark_red {
+  color: #BE0000;
+}
+
+.red {
+  color: #FE3F3F;
+}
+
+.dark_yellow {
+  color: #D9A334;
+}
+
+.yellow {
+  color: #FEFE3F;
+}
+
+.dark_green {
+  color: #00BE00;
+}
+
+.green {
+  color: #3FFE3F;
+}
+
+.dark_teal {
+  color: #00BEBE;
+}
+
+.teal {
+  color: #3FFEFE;
+}
+
+.dark_blue {
+  color: #0000BE;
+}
+
+.blue {
+  color: #3F3FFE;
+}
+
+.dark_pink {
+  color: #BE00BE;
+}
+
+.pink {
+  color: #FE3FFE;
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.grey {
+  color: #BEBEBE;
+}
+
+.dark_grey {
+  color: #3F3F3F;
+}
+
+.black {
+  color: #000000;
+}
+
+.stone_box {
+  background-image: url(/images/block_netherrack.png);
+  background-size: 32px;
+  padding: 20px;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.5);
+  border-right: solid 4px rgba(0, 0, 0, 0.5);
+  border-top: solid 4px rgba(81, 21, 21, 0.8);
+  border-left: solid 4px rgba(81, 21, 21, 0.8);
+}
+
+.black_border {
+  border: solid 6px black;
+  margin-bottom: 20px;
+}
+
+.carousel div img,
+.big_img img {
+  width: 100%;
+  overflow: hidden;
+  background-image: url(/images/item_frame_background.png);
+  background-size: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.carousel h1 {
+  width: 480px;
+}
+
+.ocean_mobs {
+  display: none;
+}
+
+.image_border {
+  border: solid 18px black;
+}
+
+.polaroid {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  display: grid;
+  grid-template-columns: calc(33% - 22px) calc(33% - 22px) calc(33% - 22px);
+  grid-template-rows: auto auto;
+  gap: 40px;
+  padding-right: 40px;
+
+  h3,
+  p {
+    padding: 10px;
+    margin-right: -36px;
+    margin-bottom: -30px;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+}
+
+.polaroid_img {
+  border: 18px solid black;
+  width: 100%;
+  aspect-ratio: 1/0.9;
+}
+
+.polaroid_img_img {
+  background-image: url('/images/nether_gold_ore.png');
+  background-size: cover;
+  overflow: hidden;
+  image-rendering: pixelated;
+
+  img {
+    border-color: transparent;
+    opacity: 0;
+  }
+}
+
+.polaroid_img_img_two {
+  background-image: url('/images/nether_quartz_ore.png');
+  background-size: cover;
+  overflow: hidden;
+  image-rendering: pixelated;
+
+  img {
+    border-color: transparent;
+    opacity: 0;
+  }
+}
+
+.polaroid_img_img_three {
+  background-image: url('/images/ancient_debris_side.png');
+  background-size: cover;
+  overflow: hidden;
+  image-rendering: pixelated;
+
+  img {
+    border-color: transparent;
+    opacity: 0;
+  }
+}
+
+.polaroid_img_img_mob_one {
+  background-image: url('/images/blaze.png');
+  background-size: cover;
+  overflow: hidden;
+  image-rendering: pixelated;
+
+  img {
+    border-color: transparent;
+    opacity: 0;
+  }
+}
+
+.polaroid_img_img_mob_two {
+  background-image: url('/images/ghast.png');
+  background-size: cover;
+  overflow: hidden;
+  image-rendering: pixelated;
+
+  img {
+    border-color: transparent;
+    opacity: 0;
+  }
+}
+
+.polaroid_img_img_mob_three {
+  background-image: url('/images/magma_cube.png');
+  background-size: cover;
+  overflow: hidden;
+  image-rendering: pixelated;
+
+  img {
+    border-color: transparent;
+    opacity: 0;
+  }
+}
+
+.polaroid_img_img_mob_four {
+  background-image: url('/images/wither_skeleton.png');
+  background-size: cover;
+  overflow: hidden;
+  image-rendering: pixelated;
+
+  img {
+    border-color: transparent;
+    opacity: 0;
+  }
+}
+
+.polaroid_img_img_mob_five {
+  background-image: url('/images/hoglin.png');
+  background-size: cover;
+  overflow: hidden;
+  image-rendering: pixelated;
+
+  img {
+    border-color: transparent;
+    opacity: 0;
+  }
+}
+
+.polaroid_img_img_mob_six {
+  background-image: url('/images/piglin.png');
+  background-size: cover;
+  overflow: hidden;
+  image-rendering: pixelated;
+
+  img {
+    border-color: transparent;
+    opacity: 0;
+  }
+}
+
+.polaroid_img_img img {
+  border-color: transparent;
+  opacity: 0;
+}
+
+@media screen and (max-width: 900px) {
+
+  .nGrid {
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+    min-width: 620px;
+    max-width: 1000px;
+  }
+
+}
+
+.n_Grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas: " biomes . . ";
+}
+
+.b_Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: " forest cave nether end ";
+  margin-right: 20px;
+}
+
+.b_Biomes {
+  grid-area: biomes;
+}
+
+.b_Forests {
+  grid-area: forest;
+}
+
+.b_Caves {
+  grid-area: cave;
+}
+
+.b_Nether {
+  grid-area: nether;
+}
+
+.b_End {
+  grid-area: end;
+}
+
+#t_left {
+  top: 50px;
+  left: 100px;
+}
+
+@media screen and (max-width: 710px) {
+  .b_Grid {
+    display: none;
+  }
+
+  .n_Grid {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+
+  header {
+    width: initial;
+  }
+}

@@ -1,0 +1,95 @@
+body {
+  background-image: url('/images/poem_bg.webp');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: fixed;
+  background-attachment: fixed;
+}
+
+.poem {
+  padding: 10px;
+  margin-bottom: 100px;
+}
+
+.poem>p {
+  font-family: Minecraft, monospace;
+  color: white;
+  text-shadow: 1px 1px 1px black, 1px 1px 1px black;
+  line-height: 1.1;
+  font-weight: normal;
+  text-align: left;
+  margin-top: 50px;
+}
+
+.skins {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+  margin-block: 50px;
+
+}
+
+.skins p {
+  background-color: rgba(122, 122, 122, 0.2);
+}
+
+@media screen and (max-width: 900px) {
+
+  .nGrid {
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+    min-width: 620px;
+    max-width: 1000px;
+  }
+}
+
+.n_Grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas: " biomes . . ";
+}
+
+.b_Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: " forest cave nether end ";
+  margin-right: 20px;
+}
+
+.b_Biomes {
+  grid-area: biomes;
+}
+
+.b_Forests {
+  grid-area: forest;
+}
+
+.b_Caves {
+  grid-area: cave;
+}
+
+.b_Nether {
+  grid-area: nether;
+}
+
+.b_End {
+  grid-area: end;
+}
+
+#t_left {
+  top: 50px;
+  left: 100px;
+}
+
+@media screen and (max-width: 710px) {
+  .b_Grid {
+    display: none;
+  }
+
+  .n_Grid {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+}

@@ -1,0 +1,698 @@
+@font-face {
+  font-family: 'Header';
+  src: url(/fonts/new_minecraft_font.ttf);
+}
+
+.hidden {
+  display: none;
+}
+
+.normal_cave_display {
+  box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px;
+}
+
+.drip_cave_display {
+  box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px;
+}
+
+.lush_cave_display {
+  box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px;
+}
+
+.deep_cave_display {
+  box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px;
+}
+
+#shake:hover {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-2deg);
+  }
+
+  75% {
+    transform: rotate(2deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+body {
+  background-image: url('/images/normal_cave_bg.png');
+  background-color: #0d0e1c;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+  background-attachment: fixed;
+}
+
+#bg_default {
+  transition: 0.4s;
+  background-image: url('/images/normal_cave_bg.png');
+}
+
+#bg_drip {
+  transition: 0.4s;
+  background-image: url('/images/dripstone_bg.png');
+}
+
+#bg_deep {
+  transition: 0.4s;
+  background-image: url('/images/deep_dark_bg.png');
+}
+
+#bg_lush {
+  transition: 0.4s;
+  background-image: url('/images/lush_caves_bg.png');
+}
+
+.default_class {
+  box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px;
+}
+
+.drip_class {
+  box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px;
+}
+
+.lush_class {
+  box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px;
+}
+
+.deep_class {
+  box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px;
+}
+
+.stone_box {
+  background-image: url(/images/deepslate_texture.png);
+  background-size: 64px;
+}
+
+.cave_biome {
+  background-position: 50% 50%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+}
+
+.biome_list {
+
+
+  display: grid;
+  grid-template-columns: 0.8fr 3fr;
+  text-align: left;
+  margin: 5px;
+}
+
+.biome_list img {
+  display: flex;
+  object-fit: contain;
+  width: 100%;
+  max-height: 65%;
+  margin: auto auto auto auto;
+  padding-left: 2px;
+  transition: 0.4s;
+
+  opacity: 50%;
+}
+
+.biome_list h2 {
+
+  font-family: 'Header';
+  font-size: 25px;
+  letter-spacing: 3px;
+
+  margin-top: 20px;
+  margin-bottom: 5px;
+  transition: 0.4s;
+  color: #6e6e6e;
+}
+
+.biome_list p {
+  margin-bottom: 15px;
+  color: #616161;
+  font-size: 20px;
+}
+
+.biome_list:hover {
+  animation: shake 0.4s;
+}
+
+.biome_list:hover h2 {
+  transition: 0.4s;
+  color: yellow;
+  text-shadow: rgb(119, 120, 69) 0px 0px 5px;
+
+}
+
+.biome_list:hover p {
+  transition: 0.4s;
+  color: #f0f0f0;
+}
+
+.biome_list:hover img {
+  transition: 0.4s;
+  opacity: 100%;
+}
+
+.biome_info {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  text-align: left;
+}
+
+.biome_card {
+  margin: 5px;
+}
+
+.biome_card img {
+
+  display: flex;
+  object-fit: contain;
+  width: 100%;
+  max-height: 100%;
+  margin: auto auto auto auto;
+
+}
+
+.biome_card_header {
+  background-image: url(/images/smaller_cave_header.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+}
+
+.biome_card h1 {
+  font-family: 'Header';
+  letter-spacing: 3px;
+  padding-left: 10px;
+  padding-top: 10px;
+  color: yellow;
+  text-shadow: rgb(119, 120, 69) 0px 0px 5px;
+
+}
+
+.pixel_corners {
+  background-color: #222222;
+
+}
+
+.biome_card h3 {
+  font-family: 'Header';
+  letter-spacing: 3px;
+  color: #3FFEFE;
+  margin-top: 10px;
+}
+
+.biome_card .image_border {
+  margin-top: 10px;
+}
+
+.structures_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+}
+
+.struct_mini_card {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  background-color: rgba(16, 4, 17, 0.90);
+  border: solid 2px #1e034b;
+  outline: solid 2px rgba(16, 4, 17, 0.90);
+  margin: 5px;
+  transition: 0.4s;
+  box-shadow: rgb(26, 255, 251) 0px 0px 0px
+}
+
+.struct_mini_card p {
+  margin-top: 5px;
+  margin-bottom: auto;
+  font-size: 14px;
+  transition: 0.5s;
+  color: white;
+  margin-left: 5px;
+}
+
+.image_border {
+  border: solid 18px black;
+}
+
+.struct_mini_card:hover p {
+  transition: 0.5s;
+  color: rgb(0, 238, 255);
+}
+
+.struct_mini_card:hover {
+  transition: 0.4s;
+  box-shadow: rgb(26, 255, 251) 0px 0px 6px;
+
+}
+
+.struct_mini_card:active p {
+  transition: 0.2s;
+  color: rgb(230, 255, 41);
+
+}
+
+.struct_mini_card:active {
+  transition: 0.2s;
+  box-shadow: rgb(232, 255, 61) 0px 0px 6px;
+
+}
+
+@keyframes struct_mini_card_hover {
+  0% {
+    color: rgb(26, 240, 255);
+  }
+
+  33% {
+    color: rgb(112, 255, 226);
+  }
+
+  66% {
+    color: rgb(19, 193, 251);
+  }
+
+  100% {
+    color: rgb(26, 240, 255);
+  }
+}
+
+.unique_mobs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.unique_mobs img {
+
+  margin-right: 10px;
+  object-fit: contain;
+  width: 100%;
+  transition: 0.4s;
+  max-height: 30px;
+}
+
+.unique_mobs img:hover {
+  transition: 0.4s;
+  max-height: 35px;
+
+  animation-name: floating;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+}
+
+.unique_mobs img:active {
+  transition: 0.2s;
+  max-height: 25px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  25% {
+    transform: translateY(2px);
+  }
+
+  75% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.ore_info {
+  display: grid;
+  margin: 3px;
+  padding: 5px;
+  grid-template-columns: 0.65fr 2fr 2fr 2fr;
+  text-align: left;
+}
+
+.ore_bg {
+  background-color: rgba(16, 4, 17, 0.90);
+  border: solid 3px #1e034b;
+  outline: solid 3px rgba(16, 4, 17, 0.90);
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+#ores_name {
+  margin: 3px;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+#ores_name p {
+  padding-top: 5px;
+  font-family: "Header";
+  letter-spacing: 2px;
+  text-align: center;
+
+}
+
+.ores_info_img {
+  object-fit: contain;
+  width: 100%;
+  transition: 0.3s;
+  max-height: 40px;
+
+}
+
+.ore_info p {
+  margin: 10px;
+
+}
+
+.ore_info p+p {
+  text-align: right;
+}
+
+#ore_box {
+  padding: 5px;
+}
+
+#coal:hover {
+  content: url(/images/3d_block_coal_ore_deep.png);
+  transition: 0.3s;
+  max-height: 45px;
+}
+
+#copper:hover {
+  content: url(/images/3d_block_copper_ore_deep.png);
+  transition: 0.3s;
+  max-height: 45px;
+
+}
+
+#iron:hover {
+  content: url(/images/3d_block_iron_ore_deep.png);
+  transition: 0.3s;
+  max-height: 45px;
+
+}
+
+#lapis:hover {
+  content: url(/images/3d_block_lapis_ore_deep.png);
+  transition: 0.3s;
+  max-height: 45px;
+
+}
+
+#redstone:hover {
+  content: url(/images/3d_block_redstone_ore_deep.png);
+  transition: 0.3s;
+  max-height: 45px;
+
+}
+
+#gold:hover {
+  content: url(/images/3d_block_gold_ore_deep.png);
+  transition: 0.3s;
+  max-height: 45px;
+
+}
+
+#diamond:hover {
+  content: url(/images/3d_block_diamond_ore_deep.png);
+  transition: 0.3s;
+  max-height: 45px;
+
+}
+
+#emerald:hover {
+  content: url(/images/3d_block_emerald_ore_deep.png);
+  transition: 0.3s;
+  max-height: 45px;
+
+}
+
+#coal:active {
+  content: url(/images/coal_icon.png);
+  max-height: 45px;
+}
+
+#copper:active {
+  content: url(/images/copper_icon.png);
+  max-height: 45px;
+}
+
+#iron:active {
+  content: url(/images/iron_icon.png);
+  max-height: 45px;
+}
+
+#lapis:active {
+  content: url(/images/lapis_icon.png);
+  max-height: 45px;
+}
+
+#redstone:active {
+  content: url(/images/redstone_icon.png);
+  max-height: 45px;
+}
+
+#gold:active {
+  content: url(/images/gold_icon.png);
+  max-height: 45px;
+}
+
+#diamond:active {
+  content: url(/images/diamond_icon2.png);
+  max-height: 45px;
+}
+
+#emerald:active {
+  content: url(/images/emerald_icon.png);
+  max-height: 45px;
+}
+
+.structure_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.structure_info {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+
+}
+
+.ancient_city_info {
+  display: grid;
+  grid-template-columns: 2fr 5fr 2fr;
+}
+
+
+
+
+.ancient_city_info img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.structure_info h3 {
+  font-size: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#mineshaft {
+  object-fit: contain;
+  width: 5%;
+}
+
+.structure_grid img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 100%;
+}
+
+.first_struct_box {
+  margin-right: 5px;
+
+}
+
+.second_struct_box {
+  margin-left: 5px;
+}
+
+.unique_mob_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.structure_info h3 {
+  color: yellow;
+}
+
+#ores_name p {
+  color: rgb(0, 238, 255);
+  text-shadow: rgb(29, 118, 124) 0px 0px 7px;
+}
+
+#blank_image_card {
+  object-fit: contain;
+  width: 100%;
+  max-height: 1%;
+}
+
+.unique_mob_card img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 80%;
+}
+
+.unique_mob_card {
+  margin: 10px;
+  padding: 20px;
+  background-color: rgba(16, 4, 17, 0.90);
+  border: solid 4px #1e034b;
+  outline: solid 4px rgba(16, 4, 17, 0.90);
+}
+
+.unique_mob_card h3 {
+  color: rgb(0, 238, 255);
+
+}
+
+@media screen and (max-width: 900px) {
+
+  .cave_biome {
+    grid-template-columns: 1fr;
+  }
+
+  .biome_info {
+    grid-template-columns: 1fr;
+  }
+
+  .struct_mini_card p {
+    font-size: 26px;
+  }
+
+  #ores_name p {
+    font-size: 20px;
+  }
+
+  .ore_info p {
+    font-size: 18px;
+  }
+
+  .structure_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .structure_info p {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .ancient_city_info {
+    grid-template-columns: 1fr;
+
+  }
+
+  #struct_info_blank_img_die_murder {
+    width: 1px;
+  }
+
+  .structure_info h3 {
+    font-size: 24px;
+  }
+
+  .unique_mob_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .title {
+    object-fit: contain;
+    width: 100%;
+    max-height: 100%;
+  }
+
+  .nGrid {
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+    min-width: 620px;
+    max-width: 1000px;
+  }
+
+  #border_thing {
+    margin-bottom: 0px;
+
+  }
+
+}
+
+.n_Grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas: " biomes . . ";
+}
+
+.b_Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: " forest cave nether end ";
+  margin-right: 20px;
+}
+
+.b_Biomes {
+  grid-area: biomes;
+}
+
+.b_Forests {
+  grid-area: forest;
+}
+
+.b_Caves {
+  grid-area: cave;
+}
+
+.b_Nether {
+  grid-area: nether;
+}
+
+.b_End {
+  grid-area: end;
+}
+
+#t_left {
+  top: 50px;
+  left: 100px;
+}
+
+@media screen and (max-width: 710px) {
+  .b_Grid {
+    display: none;
+  }
+
+  .n_Grid {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+
+  header {
+    width: initial;
+  }
+}

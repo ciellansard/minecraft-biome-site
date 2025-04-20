@@ -1,0 +1,226 @@
+main {
+  transform: none;
+}
+
+.title {
+  margin-top: 60px;
+}
+
+body {
+  background-image: url('/images/home_bg.png');
+}
+
+
+.biomes_grid {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  margin-bottom: 100px;
+
+}
+
+#last_biome {
+  margin-bottom: 10px;
+
+}
+
+#second_biome {
+  grid-template-columns: 6fr 4fr;
+}
+
+.biomes_grid h3 {
+  transition: 0.4s;
+  color: yellow;
+  text-shadow: rgb(119, 120, 69) 0px 0px 5px;
+  padding: auto auto auto auto;
+  padding-top: 7px;
+}
+
+.biomes_grid h3:hover {
+  transition: 0.4s;
+  font-size: 30px;
+  color: rgb(0, 238, 255);
+  text-shadow: rgb(69, 141, 146) 0px 0px 5px;
+
+}
+
+.biomes_grid p {
+  margin-top: 20px;
+  line-height: 25px;
+}
+
+.right_divider {
+  margin-left: 40px;
+}
+
+#funny_sound {
+  margin-top: 20px;
+
+}
+
+#funny_sound:active {
+  transition: 0.2s;
+  max-height: 250px;
+}
+
+#funny_sound:hover {
+  transition: 0.2s;
+
+  animation-name: floating;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.jukebox_click img {
+  max-height: 300px;
+}
+
+#jukebox_title {
+  padding-top: 10px;
+  color: yellow;
+  text-shadow: rgb(119, 120, 69) 0px 0px 5px;
+
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  25% {
+    transform: translateY(15px);
+  }
+
+  75% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.index_banner {
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid 4px #1e034b;
+  outline: solid 4px rgba(16, 4, 17, 0.90);
+}
+
+#forest_para {
+  background-image: url('/images/parallax_forest.png');
+}
+
+#ocean_para {
+  background-image: url('/images/parallax_ocean.png');
+}
+
+#cave_para {
+  background-image: url('/images/parallax_cave.png');
+}
+
+#nether_para {
+  background-image: url('/images/parallax_nether.png');
+}
+
+#end_para {
+  background-image: url('/images/parallax_end.png');
+}
+
+.stone_box {
+  background-size: 64px;
+  background-image: url(/images/block_stone_two.png);
+}
+
+.tool_ui {
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: rgba(16, 4, 17, 0.90);
+  border: solid 4px #1e034b;
+  outline: solid 4px rgba(16, 4, 17, 0.90);
+}
+
+@media screen and (max-width: 900px) {
+
+  .nGrid {
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+    min-width: 620px;
+    max-width: 1000px;
+  }
+
+  .biomes_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .biomes_grid p {
+    text-align: left;
+  }
+
+  #second_biome {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #second_biome p {
+    text-align: right;
+  }
+
+  .right_divider {
+    margin-left: 10px;
+  }
+}
+
+.n_Grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas: " biomes . . ";
+}
+
+.b_Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: " forest cave nether end ";
+  margin-right: 20px;
+}
+
+.b_Biomes {
+  grid-area: biomes;
+}
+
+.b_Forests {
+  grid-area: forest;
+}
+
+.b_Caves {
+  grid-area: cave;
+}
+
+.b_Nether {
+  grid-area: nether;
+}
+
+.b_End {
+  grid-area: end;
+}
+
+#t_left {
+  top: 50px;
+  left: 100px;
+}
+
+@media screen and (max-width: 710px) {
+  .b_Grid {
+    display: none;
+  }
+
+  .n_Grid {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+}

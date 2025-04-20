@@ -1,0 +1,422 @@
+body {
+  background-color: #0d0e1c;
+  background-image: url(https://e0.pxfuel.com/wallpapers/1002/422/desktop-wallpaper-forest-minecraft-minecraft-plains.jpg);
+}
+
+.stone_box {
+  background-image: url(/images/block_planks_oak.png);
+  transition-duration: 0.4s;
+}
+
+.carousel div img,
+.big_img img {
+  width: 100%;
+  overflow: hidden;
+  background-image: url(/images/item_frame_background.png);
+  background-size: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.carousel h1 {
+  width: 480px;
+}
+
+
+
+.image_border {
+  border: solid 18px black;
+}
+
+h1 {
+  padding-left: 10px;
+  padding-top: 10px;
+  color: #FEFE3F;
+}
+
+.polaroid_header {
+  margin-top: 20px;
+}
+
+.polaroid {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  display: grid;
+  grid-template-columns: calc(33% - 22px) calc(33% - 22px) calc(33% - 22px);
+  grid-template-rows: auto auto;
+  gap: 40px;
+  padding-right: 40px;
+
+  h3,
+  p {
+    padding: 10px;
+    margin-right: -36px;
+    margin-bottom: -30px;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+}
+
+.polaroid_img {
+  border: 18px solid black;
+  width: 100%;
+  aspect-ratio: 1/0.9;
+}
+
+.polaroid_img_img {
+  image-rendering: pixelated;
+  background-image: url('/images/panorama_end.jpg');
+  background-size: cover;
+}
+
+.description {
+  max-height: 20vh;
+  overflow-y: scroll;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-image: url(/images/block_stone.png);
+  background-size: 32px;
+  border-top: solid 2px rgba(0, 0, 0, 0.5);
+  border-left: solid 2px rgba(0, 0, 0, 0.5);
+  border-bottom: solid 2px rgba(255, 255, 255, 0.8);
+  border-right: solid 2px rgba(255, 255, 255, 0.8);
+  outline: 4px solid black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: url(/images/block_stone.png);
+  background-size: 32px;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.5);
+  border-right: solid 2px rgba(0, 0, 0, 0.5);
+  border-top: solid 2px rgba(255, 255, 255, 0.8);
+  border-left: solid 2px rgba(255, 255, 255, 0.8);
+  outline: 4px solid black;
+}
+
+#trees {
+  background-image: url('/images/trees.gif');
+}
+
+#flowers {
+  background-image: url('/images/flowers.gif');
+}
+
+#crops {
+  background-image: url('/images/crops.gif');
+}
+
+#passive {
+  background-image: url('/images/passive.gif');
+}
+
+#neutral {
+  background-image: url('/images/neutral.gif');
+}
+
+#tameable {
+  background-image: url('/images/tameable.gif');
+}
+
+.polaroid_img_img img {
+  border-color: transparent;
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#bg_forest {
+  transition: 0.4s;
+  background-image: url('/images/panorama_forest.jpg');
+}
+
+#bg_birch {
+  transition: 0.4s;
+  background-image: url('/images/panorama_birch.avif');
+}
+
+#bg_dark {
+  transition: 0.4s;
+  background-image: url('/images/panorama_dark.webp');
+}
+
+#bg_jungle {
+  transition: 0.4s;
+  background-image: url('/images/panorama_jungle.webp');
+}
+
+#bg_taiga {
+  transition: 0.4s;
+  background-image: url('/images/panorama_taiga.webp');
+}
+
+#bg_flower {
+  transition: 0.4s;
+  background-image: url('/images/panorama_flower.avif');
+}
+
+#bg_wooded {
+  transition: 0.4s;
+  background-image: url('/images/panorama_wooded.webp');
+}
+
+#bg_cherry {
+  transition: 0.4s;
+  background-image: url('/images/panorama_cherry.webp');
+}
+
+#biome_blurb {
+  grid-column: 1/3;
+}
+
+.forest_biome {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+}
+
+.biome_list {
+  display: grid;
+  grid-template-columns: 0.8fr 3fr;
+  gap: 10px;
+  text-align: left;
+  margin: 5px;
+
+  img {
+    display: flex;
+    object-fit: contain;
+    width: 100%;
+    max-height: 65%;
+    margin: auto auto auto auto;
+    padding-left: 2px;
+    transition: 0.4s;
+    opacity: 50%;
+  }
+
+  h2 {
+
+    font-family: 'Header';
+    font-size: 25px;
+    letter-spacing: 3px;
+
+    margin-top: 20px;
+    margin-bottom: 5px;
+    transition: 0.4s;
+    color: #6e6e6e;
+  }
+
+  p {
+    margin-bottom: 15px;
+    color: #616161;
+    transition: 0.4s;
+  }
+}
+
+.biome_list:hover {
+  animation: shake 0.4s;
+
+  h2 {
+    color: #FEFE3F;
+  }
+
+  p {
+    color: #FFFFFF;
+  }
+
+  img {
+    opacity: 100%;
+  }
+}
+
+.biome_info {
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.biome_card {
+  margin: 5px;
+
+  img {
+    display: flex;
+    object-fit: contain;
+    width: 100%;
+    max-height: 100%;
+    margin: auto auto auto auto;
+  }
+
+  h3 {
+    margin-top: 10px;
+  }
+
+  p {
+    line-height: 1;
+  }
+
+  .image_border {
+    margin-top: 10px;
+  }
+}
+
+.unique_mobs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 14px;
+  background-image: url(/images/block_stone.png);
+  background-size: 32px;
+  padding: 2px;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.5);
+  border-right: solid 4px rgba(0, 0, 0, 0.5);
+  border-top: solid 4px rgba(255, 255, 255, 0.8);
+  border-left: solid 4px rgba(255, 255, 255, 0.8);
+  outline: 4px solid black;
+  margin-top: 4px;
+
+  img {
+    margin-right: 10px;
+    object-fit: contain;
+    width: 100%;
+    transition: 0.4s;
+    max-height: 30px;
+    padding: 2px;
+    border-top: solid 4px rgba(0, 0, 0, 0.5);
+    border-left: solid 4px rgba(0, 0, 0, 0.5);
+    border-bottom: solid 4px rgba(255, 255, 255, 0.5);
+    border-right: solid 4px rgba(255, 255, 255, 0.5);
+  }
+
+  img:hover {
+    animation-name: floating;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    border: 4px solid #3FFEFE;
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  25% {
+    transform: translateY(2px);
+  }
+
+  75% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-2deg);
+  }
+
+  75% {
+    transform: rotate(2deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#shake:hover {
+  animation: shake 0.5s;
+}
+
+@media screen and (max-width: 720px) {
+  .polaroid {
+    grid-template-columns: 1fr;
+    margin-bottom: 40px;
+  }
+}
+
+.unique_mobs {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.biome_list {
+  grid-template-columns: 100px auto;
+  height: 100px;
+
+  img {
+    max-height: 80px;
+  }
+}
+
+.biome_info {
+  grid-template-columns: 1fr;
+}
+
+@media screen and (max-width: 900px) {
+  .forest_biome {
+    display: block;
+  }
+}
+
+.n_Grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas: " biomes . . ";
+}
+
+.b_Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: " forest cave nether end ";
+  margin-right: 20px;
+}
+
+.b_Biomes {
+  grid-area: biomes;
+}
+
+.b_Forests {
+  grid-area: forest;
+}
+
+.b_Caves {
+  grid-area: cave;
+}
+
+.b_Nether {
+  grid-area: nether;
+}
+
+.b_End {
+  grid-area: end;
+}
+
+#t_left {
+  top: 50px;
+  left: 100px;
+}
+
+@media screen and (max-width: 710px) {
+  .b_Grid {
+    display: none;
+  }
+
+  .n_Grid {
+    grid-template-columns: 0.5fr 1.5fr;
+  }
+}
